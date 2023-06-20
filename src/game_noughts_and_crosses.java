@@ -152,6 +152,21 @@ public class game_noughts_and_crosses {
     }
 
     private static boolean isWinner(char[][] gameTable, char ch) {
+        for (int i = 0; i < 3; i++) {
+            if (gameTable[i][0] == ch && gameTable[i][0] == gameTable[i][1] && gameTable[i][0] == gameTable[i][2]) {
+                return true;
+            }
+        }
+        for (int i = 0; i < 3; i++) {
+            if (gameTable[0][i] == ch && gameTable[0][i] == gameTable[1][i] && gameTable[0][i] == gameTable[2][i]) {
+                return true;
+            }
+        }
+        if (gameTable[0][0] == ch && gameTable[0][0] == gameTable[1][1] && gameTable[0][0] == gameTable[2][2]) {
+            return true;
+        } else if (gameTable[0][2] == ch && gameTable[0][2] == gameTable[1][1] && gameTable[0][2] == gameTable[2][0]) {
+            return true;
+        }
         return false;
     }
 
