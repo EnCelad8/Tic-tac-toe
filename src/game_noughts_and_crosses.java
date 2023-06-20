@@ -124,7 +124,22 @@ public class game_noughts_and_crosses {
     }
 
     private static void makeComputerMove(char[][] gameTable) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+            }
+        }
 
+
+        Random random = new Random();
+        while (true) {
+            int row = random.nextInt(3);
+            int col = random.nextInt(3);
+            if (gameTable[row][col] == ' ') {
+                gameTable[row][col] = '0';
+                System.out.println("Computer made a move");
+                return;
+            }
+        }
     }
 
     private static boolean isUserWin(char[][] gameTable) {
