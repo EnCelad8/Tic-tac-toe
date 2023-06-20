@@ -143,12 +143,12 @@ public class game_noughts_and_crosses {
     }
 
     private static boolean isUserWin(char[][] gameTable) {
-        return false;
+        return isWinner(gameTable, 'X');
 
     }
 
     private static boolean isComputerWin(char[][] gameTable) {
-        return false;
+        return isWinner(gameTable, '0');
     }
 
     private static boolean isWinner(char[][] gameTable, char ch) {
