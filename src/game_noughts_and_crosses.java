@@ -82,8 +82,23 @@ public class game_noughts_and_crosses {
 
 
     private static void makeUserMove(char[][] gameTable) {
-
+        while (true) {
+            System.out.println("Please type number between 1 and 9:");
+//            Scanner userNum = new Scanner(System.in);
+            String string = new Scanner(System.in).nextLine();
+            if (string.length() == 1) {
+                char ch1 = string.charAt(0);
+//                int number = userNum.nextInt();
+//                char ch = Character.forDigit(number, 10);
+                if (ch1 >= '1' & ch1 <= '9') {
+                    if (makeUserMoveToCell(gameTable, ch1)) {
+                        return;
+                    }
+                }
+            }
+        }
     }
+
 
     private static boolean makeUserMoveToCell(char[][] gameTable, char digit) {
 
