@@ -124,10 +124,10 @@ public class game_noughts_and_crosses {
     }
 
     private static void makeComputerMove(char[][] gameTable) {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-            }
-        }
+//        for (int i = 0; i < 3; i++) {
+//            for (int j = 0; j < 3; j++) {
+//            }
+//        }
 
 
         Random random = new Random();
@@ -171,7 +171,18 @@ public class game_noughts_and_crosses {
     }
 
     private static boolean isDraw(char[][] gameTable) {
-        return false;
+//        int counter = 0;
+        for (int i = 0; i < gameTable.length; i++) {
+            for (int j = 0; j < gameTable[i].length; j++) {
+                if (gameTable[i][j] == ' ') {
+                    return false;
+                }
+            }
+        }
+//        if (counter == 9) {
+//            return true;
+//        }
+        return true;
 
     }
 }
